@@ -1,7 +1,11 @@
+#include <vector>
+
+using std::vector;
+
 class Solution {
 public:
-    vector <vector<int>> intervalIntersection(vector <vector<int>> &firstList, vector <vector<int>> &secondList) {
-        vector <vector<int>> intersection;
+    vector<vector<int>> intervalIntersection(vector<vector<int>> &firstList, vector<vector<int>> &secondList) {
+        vector<vector<int>> intersection;
         for (auto curr: firstList) {
             for (auto it = secondList.begin(); it < secondList.end(); it++) {
                 // if the end of this interval is before the start of this one

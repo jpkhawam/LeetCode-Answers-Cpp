@@ -1,3 +1,11 @@
+#include <vector>
+#include <string>
+#include <unordered_map>
+
+using std::vector;
+using std::string;
+using std::unordered_map;
+
 class Solution {
 public:
     vector<int> findAnagrams(string s, string p) {

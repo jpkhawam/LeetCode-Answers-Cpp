@@ -1,3 +1,9 @@
+#include <vector>
+#include <cstddef>
+#include <algorithm>
+
+using std::vector;
+
 class Solution {
 public:
     vector<vector<int>> threeSum(vector<int> &nums) {
@@ -6,7 +12,7 @@ public:
         vector<vector<int>> res;
 
         for (int i = 0; i < nums.size() - 2; i++) {
-            // dont have two combinations that start with the same number
+            // should not have two combinations that start with the same number
             if (i > 0 && nums[i] == nums[i - 1]) {
                 continue;
             }

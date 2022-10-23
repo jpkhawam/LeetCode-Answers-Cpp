@@ -1,6 +1,10 @@
+#include <vector>
+
+using std::vector;
+
 class Solution {
 public:
-    bool searchMatrix(vector <vector<int>> &matrix, int target) {
+    bool searchMatrix(vector<vector<int>> &matrix, int target) {
         // first binary search the rows
         // then we only need to search the row before the first invalid element (bigger than target)
         int left = 0;

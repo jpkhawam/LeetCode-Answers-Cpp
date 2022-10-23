@@ -1,8 +1,13 @@
+#include <vector>
+#include <algorithm>
+
+using std::vector;
+
 class Solution {
 public:
     int findMin(vector<int> &nums) {
         int result = nums[0];
-        int left = 0, right = nums.size() - 1;
+        size_t left = 0, right = nums.size() - 1;
 
         while (left <= right) {
             if (nums[left] < nums[right]) {
@@ -10,7 +15,7 @@ public:
                 result = result < nums[left] ? result : nums[left];
                 break;
             }
-            int mid = (left + right) / 2;
+            size_t mid = (left + right) / 2;
             // always store the current minimum value you find in result
             result = result < nums[mid] ? result : nums[mid];
             if (nums[mid] >= nums[left]) {

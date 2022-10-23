@@ -1,3 +1,7 @@
+#include <vector>
+
+using std::vector;
+
 class Solution {
 public:
     int numSubarrayProductLessThanK(vector<int> &nums, int k) {

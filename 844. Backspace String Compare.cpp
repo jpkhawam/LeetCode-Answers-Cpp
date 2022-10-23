@@ -1,3 +1,9 @@
+#include <string>
+#include <stack>
+
+using std::string;
+using std::stack;
+
 class Solution {
 public:
     bool backspaceCompare(string s, string t) {

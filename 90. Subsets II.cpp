@@ -1,5 +1,10 @@
+#include <vector>
+#include <algorithm>
+
+using std::vector;
+
 class Solution {
-public:
+private:
     vector<vector<int>> *output = new vector<vector<int>>();
 
     void backtrack(int index, vector<int> &curr, vector<int> &nums) {
@@ -20,6 +25,7 @@ public:
         backtrack(index + 1, curr, nums);
     }
 
+public:
     vector<vector<int>> subsetsWithDup(vector<int> &nums) {
         // sort input array to make possible skipping over duplicates
         std::sort(nums.begin(), nums.end());
