@@ -24,7 +24,7 @@ public:
                 if (sum > 0) right--;
                 else if (sum < 0) left++;
                 else {
-                    res.push_back(std::vector<int>({nums[i], nums[left], nums[right]}));
+                    res.push_back({nums[i], nums[left], nums[right]});
                     left++;
                     // the left pointer shouldn't point to the same number twice
                     while (nums[left] == nums[left - 1] && left < right) left++;
