@@ -12,12 +12,11 @@ public:
         while (left <= right) {
             if (nums[left] < nums[right]) {
                 // array is now sorted
-                result = result < nums[left] ? result : nums[left];
+                result = std::min(result, nums[left]);
                 break;
             }
             size_t mid = (left + right) / 2;
-            // always store the current minimum value you find in result
-            result = result < nums[mid] ? result : nums[mid];
+            result = std::min(result, nums[mid]); // always store the current minimum value you find in result
             if (nums[mid] >= nums[left]) {
                 // we are in left sorted portion, minimum will always be to the right
                 left = mid + 1;
@@ -29,3 +28,4 @@ public:
         return result;
     }
 };
+
